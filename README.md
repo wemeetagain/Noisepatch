@@ -11,4 +11,5 @@ We will pull from as many prebuild django apps as possible.
  - wiki - https://pypi.python.org/pypi/wiki
  - to to - https://github.com/shacker/django-todo
  - project management - http://code.google.com/p/django-project-management/
+ - calendar - https://github.com/arshaw/fullcalendar
 
