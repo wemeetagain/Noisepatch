@@ -1,0 +1,17 @@
+#!/bin/bash
+#ensures compatibility and modifies Makefile depending on system
+if hash npm 2>/dev/null
+then
+	sed -i 's/.*nodejs.*//' ./Makefile
+else
+	if hash pacman 2>/dev/null
+	then
+		PACKAMANA="pacman -S --noconfirm"
+	else
+		if hash apt-get 2>/dev/null
+		then
+			PACKAMANA="apt-get -y"
+		fi
+	fi
+	sed -i "s/genpac/$PACKAMANA/g" ./Makefile
+fi
